@@ -1,4 +1,5 @@
 # Angular-Universal
 
-ng build -prod --build-optimizer --app 0
-ng build --aot --app 1
+Run `ng build -prod --build-optimizer --app 0`
+
+Run `ng build --aot --app 1`
