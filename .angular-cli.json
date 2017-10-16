@@ -3,23 +3,19 @@
   "project": {
     "name": "angular-universal"
   },
-  "apps": [{
+  "apps": [
+    {
       "root": "src",
-      "outDir": "dist/browser",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "outDir": "dist",
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
-      "styles": [
-        "styles.scss"
-      ],
+      "prefix": "",
+      "styles": ["styles.scss"],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -27,38 +23,32 @@
         "prod": "environments/environment.prod.ts"
       }
     },
-
     {
-      "name": "ssr",
+      "platform": "server",
       "root": "src",
       "outDir": "dist/server",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "main": "main-ssr.ts",
-      "tsconfig": "tsconfig.app-ssr.json",
-      "prefix": "app",
-      "styles": [
-        "styles.scss"
-      ],
-      
+      "assets": [],
+      "index": "index.html",
+      "main": "main.server.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.server.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "",
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      },
-      "platform": "server"
+      }
     }
   ],
-
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
     }
   },
-  "lint": [{
+  "lint": [
+    {
       "project": "src/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
